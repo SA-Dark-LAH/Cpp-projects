@@ -12,17 +12,15 @@ private:
     unsigned int attackDamage;
 
 public:
-    // Orthodox Canonical Form
-    ClapTrap();                                // default
-    ClapTrap(const std::string& name);         // param
-    ClapTrap(const ClapTrap& other);           // copy
-    ClapTrap& operator=(const ClapTrap& other);// assignment
-    ~ClapTrap();                               // destructor
+    ClapTrap();                            
+    ClapTrap(const std::string& name);    
+    ClapTrap(const ClapTrap& other);      
+    ClapTrap& operator=(const ClapTrap& other);
+    ~ClapTrap();                            
 
-    // Actions
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };
 
-#endif // CLAPTRAP_HPP
+#endif

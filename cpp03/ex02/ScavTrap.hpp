@@ -6,14 +6,14 @@
 class ScavTrap : public ClapTrap
 {
 public:
-    ScavTrap();                      // Default constructor
-    ScavTrap(const std::string& name); // Name constructor
-    ScavTrap(const ScavTrap& other);   // Copy constructor
-    ScavTrap& operator=(const ScavTrap& other); // Copy assignment
-    ~ScavTrap();                      // Destructor
+    ScavTrap();                     
+    ScavTrap(const std::string& name);
+    ScavTrap(const ScavTrap& other);  
+    ScavTrap& operator=(const ScavTrap& other);
+    ~ScavTrap();                  
 
-    void attack(const std::string& target); // Override
-    void guardGate();                        // Special ability
+    void attack(const std::string& target);
+    void guardGate();
 };
 
 #endif
