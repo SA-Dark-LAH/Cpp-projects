@@ -19,7 +19,6 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 {
-    *this = other;
     std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 
@@ -44,14 +43,10 @@ void ScavTrap::attack(const std::string& target)
     }
 
     this->energyPoints--;
-    std::cout << "ScavTrap " << this->name << " attacks "
-              << target << ", causing "
-              << this->attackDamage << " points of damage!"
-              << std::endl;
+    std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()
 {
-    std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode."
-              << std::endl;
+    std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode." << std::endl;
 }
