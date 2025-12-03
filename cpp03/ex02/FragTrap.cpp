@@ -1,6 +1,14 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
+FragTrap::FragTrap() : ClapTrap("DefaultFrag")
+{
+    this->hitPoints = 100;
+    this->energyPoints = 100;
+    this->attackDamage = 30;
+    std::cout << "FragTrap default constructor called for " << this->name << std::endl;
+}
+
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 {
     this->hitPoints = 100;
@@ -11,7 +19,6 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
 {
-    // ClapTrap copy constructor takes care of copying base members
     std::cout << "FragTrap copy constructor called for " << this->name << std::endl;
 }
 
@@ -19,7 +26,7 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 {
     if (this != &other)
     {
-        ClapTrap::operator=(other); // reuse base assignment
+        ClapTrap::operator=(other); // i use the base's copy assignment op
     }
     std::cout << "FragTrap assignment operator called for " << this->name << std::endl;
     return *this;

@@ -4,19 +4,17 @@
 
 int main()
 {
-    ClapTrap c("CT");
-    FragTrap f("FT");
+    ClapTrap c("Clap1");
+    FragTrap f("Frag1");
 
     std::cout << std::endl;
 
-    // Test ClapTrap
     c.attack("Target");
     c.takeDamage(5);
     c.beRepaired(3);
 
     std::cout << std::endl;
 
-    // Test FragTrap
     f.attack("Enemy");
     f.takeDamage(20);
     f.beRepaired(10);
